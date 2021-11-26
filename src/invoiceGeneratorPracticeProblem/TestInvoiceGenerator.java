@@ -32,4 +32,14 @@ public class TestInvoiceGenerator {
 		double fare = invoiceGenerator.calculateFare(rides);
 		Assert.assertEquals(30, fare, 0.0);
 	}
+
+// Invoice Summary ::
+	@Test
+	public void MultipleRides_ShouldReturnTotalFare() {
+		MainInvoiceGenerator invoiceGenerator = new MainInvoiceGenerator();
+		Rides[] rides = { new Rides(2.0, 5), new Rides(0.1, 1) };
+		InvoiceSummary Summary = invoiceGenerator.CalcFare(rides);
+		InvoiceSummary expectedInvoiceSummary = new InvoiceSummary(2, 30.0);
+		Assert.assertEquals(expectedInvoiceSummary, Summary);
+	}
 }
