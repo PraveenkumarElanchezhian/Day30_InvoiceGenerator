@@ -14,6 +14,7 @@ public class TestInvoiceGenerator {
 		Assert.assertEquals(25, fare, 0.0);
 	}
 
+// Calc Fare of one ride ::	
 	@Test
 	public void givenLessDistanceORTime_ShouldReturnTotalFare() {
 		MainInvoiceGenerator invoiceGenerator = new MainInvoiceGenerator();
@@ -23,7 +24,7 @@ public class TestInvoiceGenerator {
 		Assert.assertEquals(5, fare, 0.0);
 	}
 
-// Calc Fare of one ride ::	
+// Calc Fare of multiple ride ::	
 	@Test
 	public void givenMultipleRides_ShouldReturnTotalFare() {
 		MainInvoiceGenerator invoiceGenerator = new MainInvoiceGenerator();
